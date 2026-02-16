@@ -1,0 +1,190 @@
+========================================
+LOCAL AI CHATBOT SETUP GUIDE
+========================================
+
+This guide explains how to run the local AI chatbot on your computer.
+The chatbot runs completely offline using Ollama and Python.
+
+Follow each step carefully.
+
+
+----------------------------------------
+STEP 1 — Install Ollama
+----------------------------------------
+
+1. Open your browser.
+2. Go to: https://ollama.com
+3. Download Ollama for Windows.
+4. Install it normally.
+5. Restart your computer after installation (important).
+
+
+----------------------------------------
+STEP 2 — Open Command Prompt
+----------------------------------------
+
+1. Press the Windows key.
+2. Type: cmd
+3. Press Enter.
+
+
+----------------------------------------
+STEP 3 — Verify Ollama Installation
+----------------------------------------
+
+In Command Prompt, type:
+
+ollama list
+
+Press Enter.
+
+If it shows a list (even empty), Ollama is installed correctly.
+
+
+----------------------------------------
+STEP 4 — Download Required Model
+----------------------------------------
+
+In Command Prompt, type:
+
+ollama pull qwen2.5:3b
+
+Press Enter.
+
+Wait until the model finishes downloading completely.
+(This may take a few minutes depending on internet speed.)
+
+
+----------------------------------------
+STEP 5 — Extract the ZIP File
+----------------------------------------
+
+1. Right-click the ZIP file.
+2. Click "Extract All".
+3. Extract it to your Desktop.
+
+You should now see a folder named:
+
+ai-team-backend
+
+
+----------------------------------------
+STEP 6 — Open Command Prompt Inside the Folder
+----------------------------------------
+
+1. Open the extracted folder.
+2. Click the address bar at the top.
+3. Type: cmd
+4. Press Enter.
+
+A Command Prompt window will open inside that folder.
+
+
+----------------------------------------
+STEP 7 — Check Python Installation
+----------------------------------------
+
+In that Command Prompt window, type:
+
+python --version
+
+Press Enter.
+
+If it shows a version number → Python is installed.
+
+If not installed:
+1. Go to https://python.org
+2. Download Python
+3. Install it
+4. Restart your computer
+
+
+----------------------------------------
+STEP 8 — Install Required Python Library
+----------------------------------------
+
+In the same folder Command Prompt, type:
+
+pip install requests
+
+Press Enter.
+
+Wait until installation completes.
+
+
+----------------------------------------
+STEP 9 — Run the Chatbot
+----------------------------------------
+
+In the same Command Prompt window, type:
+
+python prompt_test.py
+
+Press Enter.
+
+You should now see:
+
+=== Local AI Chat (Interactive Mode) ===
+Type 'exit' to quit.
+Enter your prompt:
+
+The chatbot is now working.
+
+
+----------------------------------------
+STEP 10 — How to Use
+----------------------------------------
+
+Type your question after:
+
+Enter your prompt:
+
+Press Enter.
+
+The model will respond.
+
+To exit the chatbot, type:
+
+exit
+
+and press Enter.
+
+
+----------------------------------------
+IMPORTANT NOTES
+----------------------------------------
+
+• The first response may take 2–5 seconds.
+• All conversations are saved automatically in:
+
+prompt_log.txt
+
+• The system works completely offline after the model is downloaded.
+• No internet is required after setup.
+
+
+----------------------------------------
+COMMON ISSUES
+----------------------------------------
+
+If you see:
+
+model not found
+
+Run:
+
+ollama pull qwen2.5:3b
+
+
+If you see connection errors:
+
+1. Restart your computer.
+2. Open Command Prompt again.
+3. Run the program again.
+
+
+----------------------------------------
+END OF SETUP
+----------------------------------------
+
+If all steps are followed correctly, the chatbot will run smoothly.
